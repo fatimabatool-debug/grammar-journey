@@ -1,0 +1,11 @@
+import assert from "node:assert";
+import { isCorrect, score } from "../src/lib/check";
+import { lessons } from "../src/content/lessons";
+assert(isCorrect("  she   Walks. ", ["She walks"]));
+assert(isCorrect("She doesn’t like tea", ["She doesn't like tea"]));
+assert(!isCorrect("She doesn't likes tea", ["She doesn't like tea"]));
+assert(!isCorrect("", ["x"]));
+const s = score([true, false, null, true]);
+assert.deepEqual([s.correct, s.incorrect, s.unanswered, s.percent], [2, 1, 1, 50]);
+for (const l of lessons) for (const e of l.exercises) assert(e.answers.length && e.explanation, e.id);
+console.log("All tests passed");

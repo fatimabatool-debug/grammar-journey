@@ -1,0 +1,13 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+:root{--page:#F8FAFC;--card:#FFFFFF;--raised:#FFFFFF;--ink:#334155;--mute:#64748B;--line:#E2E8F0;--brand:#4F46E5;--teal:#0F766E;--link:#4F46E5;--softind:#EEF2FF;--softteal:#F0FDFA;--ok:#15803D;--okbg:#F0FDF4;--err:#B91C1C;--errbg:#FEF2F2;--warn:#92400E;--warnbg:#FFFBEB}
+.dark{--page:#0F172A;--card:#1E293B;--raised:#273449;--ink:#F1F5F9;--mute:#CBD5E1;--line:#475569;--teal:#5EEAD4;--link:#A5B4FC;--softind:#27305a;--softteal:#12373a;--ok:#86EFAC;--okbg:#14301f;--err:#FCA5A5;--errbg:#3b1a1d;--warn:#FCD34D;--warnbg:#3a2e12}
+body{@apply bg-page text-ink font-sans antialiased}
+h1,h2,h3{@apply text-navy dark:text-ink font-bold}
+:focus-visible{outline:3px solid var(--brand);outline-offset:2px}.dark :focus-visible{outline-color:#A5B4FC}
+.card{@apply rounded-2xl border border-line bg-card p-5 shadow-sm}
+.btn{@apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded-xl bg-brand px-5 font-medium text-white transition-colors duration-150 hover:bg-indigo-700 disabled:opacity-50}
+.btn2{@apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded-xl border border-line bg-card px-5 font-medium text-ink transition-colors duration-150 hover:border-brand}
+.badge{@apply inline-block rounded-full bg-softind px-3 py-1 text-sm font-medium text-ink}
+.callout{@apply rounded-xl border border-line p-4 my-4}
+.lesson{@apply text-[17px] leading-relaxed max-w-[70ch] sm:text-lg}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
